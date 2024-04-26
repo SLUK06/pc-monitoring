@@ -14,7 +14,7 @@ app.use(router);
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('API Smart Maintenance');
+    res.send('Hello World');
 });
 
 const port = process.env.PORT || 3000;
