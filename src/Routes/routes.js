@@ -8,10 +8,7 @@ router.post('/inserirDados', Controllers.adicionarDados);
 router.get('/buscarDados', Controllers.buscarDados);
 
 router.get('/hello', function(req, res){
-    const hello = [
-        {"id" : 1, "hello" : "Hello World!"}
-    ]
-    res.json(hello);
+    res.send("Hello World!!");
 });
 
 
