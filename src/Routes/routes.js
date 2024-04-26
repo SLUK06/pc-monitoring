@@ -1,21 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const Controllers = require('../Controllers/Controller');
+const Controllers = require('../Controllers/Controller.js');
 
 //rotas
-router.post('/insertData', function(req, res){
-    Controllers.adicionarDados
-});
+router.post('/inserirDados', Controllers.adicionarDados);
 
-router.get('/fetchData', function(req, res){
-    Controllers.buscarDados
-});
+router.get('/buscarDados', Controllers.buscarDados);
 
 router.get('/hello', function(req, res){
     const hello = [
         {"id" : 1, "hello" : "Hello World!"}
     ]
-    res.json(users);
+    res.json(hello);
 });
 
 

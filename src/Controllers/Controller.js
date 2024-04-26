@@ -1,7 +1,6 @@
 const database = require('../Databases/connection');
-var bodyParser = require('body-parser');
 
-class Controllers {
+class Controller {
 
     adicionarDados(req, res) {
 
@@ -32,3 +31,4 @@ class Controllers {
         })
     }
 }
+module.exports = new Controller();
