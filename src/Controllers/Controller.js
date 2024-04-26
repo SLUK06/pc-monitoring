@@ -4,11 +4,11 @@ class Controller {
 
     adicionarDados(req, res) {
 
-        const { timestamp, cpuTemp, gpuTemp, cpuClock, memoryClock } = req.body;
+        const { cpuTemp, gpuTemp, cpuClock, memoryClock } = req.body;
 
-        console.log(timestamp, cpuTemp, gpuTemp, cpuClock, memoryClock);
+        console.log( cpuTemp, gpuTemp, cpuClock, memoryClock);
 
-        database.insert({ timestamp, cpuTemp, gpuTemp, cpuClock, memoryClock }).table("info").then(data => {
+        database.insert({ cpuTemp, gpuTemp, cpuClock, memoryClock }).table("info").then(data => {
             console.log(data);
             res.json({ mensagem: "Dados inseridos com sucesso!" });
 
