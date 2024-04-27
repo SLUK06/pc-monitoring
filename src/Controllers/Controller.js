@@ -22,7 +22,7 @@ class Controller {
 
     buscarDados(req, res) {
 
-        database.select("*").table("info").orderBy("timestamp", "desc").limit(1).then(data => {
+        database.select("*").table("info").orderBy("id", "desc").limit(1).then(data => {
             console.log(data);
             res.json(data);
 
