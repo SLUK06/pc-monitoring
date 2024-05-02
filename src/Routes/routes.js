@@ -7,6 +7,8 @@ router.post('/inserirDados', Controllers.adicionarDados);
 
 router.get('/buscarDados', Controllers.buscarDados);
 
+router.delete('/deletarDados', Controllers.deletarDados);
+
 router.get('/hello', function(req, res){
     res.send("Hello World!!");
 });

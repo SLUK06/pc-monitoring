@@ -30,5 +30,15 @@ class Controller {
             console.log(error);
         })
     }
+
+    deletarDados(req, res){
+        database.table("info").delete("*").then(res => {
+            res.json("Dados deletados com Sucesso!!");
+
+        }).catch(error => {
+            res.status(500).json(error = { error: "Erro ao deletar dados" });
+        });;
+        
+    }
 }
 module.exports = new Controller();
